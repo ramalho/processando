@@ -23,12 +23,13 @@ void draw() {
   strokeWeight(10);
   //line(300,300,580,300); 
   translate(300,300);
-  float ang = map(millis() % 60000,0,59999,-90,270.0);
-  if(ang>=264){
-    rotate(radians(264));
-  }
-  else
-  rotate(radians(ang));
+  float ang = map(millis() % 60000,0,59999,0,359.999);
+  if(ang>=(360-6) && ang<(360-2))
+    rotate(radians(360-6-90));
+  else if (ang>=(360-2))
+    rotate(radians(360-90));
+  else  
+    rotate(radians(ang-90));
   line(0,0,280,0); 
   
 }
