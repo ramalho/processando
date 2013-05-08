@@ -6,8 +6,3 @@ void setup() {
 void draw() {
   ellipse(mouseX, mouseY, 50, 50);
 }
-
-void mouseReleased() {
-  background(0, 0, 255);
-}
-
